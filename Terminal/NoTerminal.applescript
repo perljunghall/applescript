@@ -8,8 +8,8 @@ else if termcommand contains termcommand then
 	try
 		set resultdisp to do shell script termcommand
 		display alert resultdisp
-	on error
-		display alert "Your command failed to execute"
+	on error err
+		display alert "Your command failed to execute" message err
 	end try
 end if
 
